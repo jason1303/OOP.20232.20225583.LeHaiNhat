@@ -32,6 +32,47 @@ public class Cart {
 		}
 	}
 
+	//overloading method addDigitalVideoDisc (section 14.1)
+
+	public void addDigitalVideoDisc (DigitalVideoDisc... dvdlist) {
+		int check = qtyOrdered();
+		if(dvdlist.length == 0) {
+			System.out.println("No DVDs providede to add to the cart");
+		}else {
+			for (int i = 0 ; i < dvdlist.length; i++ ) {
+				if (check == 20) {
+					System.out.println("The cart is already full, cannot add more DVD into the cart");
+					return;
+				}else {
+					itemsOrdered[check] = dvdlist[i];
+					check += 1;
+				}
+				
+			}
+			return;
+			
+		}
+	}
+	
+	
+	
+// overloading method addDigitalVideoDisc (section 14.2)
+	public void addDigitalVideoDisc (DigitalVideoDisc dvd1, DigitalVideoDisc dvd2) {
+		int check = qtyOrdered();
+		if (check == 20) {
+			System.out.println("The cart is already full, cannot add more DVD into the cart");
+			return;
+		}else if (check == 19) {
+			itemsOrdered[check] = dvd1;
+			System.out.println("Add only the first DVD into the cart due to maximum number of DVD in the cart");
+			return;
+		}else {
+			itemsOrdered[check] = dvd1;
+			itemsOrdered[check+1]=dvd2;
+			System.out.print("The DVDs is successfully added into the cart");
+		}
+	}
+
 	
 	//remove an item from the cart (return removed disc)
 	public void removeDigitalVideoDisc (DigitalVideoDisc disc) {
