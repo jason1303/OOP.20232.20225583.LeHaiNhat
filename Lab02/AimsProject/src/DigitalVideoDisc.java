@@ -66,5 +66,9 @@ public class DigitalVideoDisc {
 		this.length = length;
 		this.cost = cost;
 	}
+	public void setTitle(String title2) {
+		this.title = title2;
+		
+	}
 	
 }
