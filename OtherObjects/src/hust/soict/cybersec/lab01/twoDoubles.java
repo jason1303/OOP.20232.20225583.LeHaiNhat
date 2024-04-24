@@ -1,3 +1,5 @@
+package hust.soict.cybersec.lab01;
+
 import java.util.Scanner;
 public class twoDoubles {
 	public static void main(String args[]) {

@@ -1,78 +1,52 @@
-package hust.soict.cybersec.aims.disc;
+package hust.soict.cybersec.aims.media;
 
-public class DigitalVideoDisc {
+public class DigitalVideoDisc extends Media {
 	
-	// instance attribute
-	private int id;
-	private String title;
-	private String category;
 	private String director;
 	private int length;
-	private float cost;
 	
-	
-	//section 16: class attributre
+	//section 16: class attribute
 	private static int nbDigitalVideoDisc = 0;
-	//getter
-	public String getTitle() {
-		return title;
-	}
-	public String getCategory() {
-		return category;
-	}
+	
+	//getter and setter 
 	public String getDirector() {
 		return director;
 	}
 	public int getLength() {
 		return length;
 	}
-	public float getCost() {
-		return cost;
-	}
-	
-
 	
 	//constructor method
 	public DigitalVideoDisc(String title) {
-		super();
+		super(title);
 		nbDigitalVideoDisc += 1;
-		this.id = nbDigitalVideoDisc;
-		this.title = title;
-	}
-	
-	public DigitalVideoDisc(String title, String category, float cost) {
-		super();
-		nbDigitalVideoDisc += 1;
-		this.id = nbDigitalVideoDisc;
-		this.title = title;
-		this.category = category;
-		this.cost = cost;
-	}
-	public DigitalVideoDisc(String title, String category, String director, float cost) {
-		super();
-		nbDigitalVideoDisc += 1;
-		this.id = nbDigitalVideoDisc;
-		this.title = title;
-		this.category = category;
-		this.director = director;
-		this.cost = cost;
-	}
-	public DigitalVideoDisc(String title, String category, String director, int length, float cost) {
-		super();
-		nbDigitalVideoDisc += 1;
-		this.id = nbDigitalVideoDisc;
-		this.title = title;
-		this.category = category;
-		this.director = director;
-		this.length = length;
-		this.cost = cost;
-	}
-	public void setTitle(String title2) {
-		this.title = title2;
+		id = nbDigitalVideoDisc;
 		
 	}
+	public DigitalVideoDisc(String title, String category, float cost) {
+		super(title,category,cost);
+		nbDigitalVideoDisc += 1;
+		this.id = nbDigitalVideoDisc;
+		
+	}
+	public DigitalVideoDisc(String title, String category, String director, float cost) {
+		super(title,category,cost);
+		nbDigitalVideoDisc += 1;
+		this.id = nbDigitalVideoDisc;
+		
+		this.director = director;
+		
+	}
+	public DigitalVideoDisc(String title, String category, String director, int length, float cost) {
+		super(title,category,cost);
+		nbDigitalVideoDisc += 1;
+		this.id = nbDigitalVideoDisc;
+		this.director = director;
+		this.length = length;
+	}
+	
 	public int getID() {
-		return this.id;
+		return id;
 	}
 	
 	public String toString () {
