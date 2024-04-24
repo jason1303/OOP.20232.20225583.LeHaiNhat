@@ -1,53 +1,13 @@
 package hust.soict.cybersec.aims.media;
 
-public class DigitalVideoDisc extends Media {
+public class DigitalVideoDisc extends Disc {
 	
-	private String director;
-	private int length;
 	
-	//section 16: class attribute
-	private static int nbDigitalVideoDisc = 0;
-	
-	//getter and setter 
-	public String getDirector() {
-		return director;
-	}
-	public int getLength() {
-		return length;
+	public DigitalVideoDisc (String title, String category,float cost, int length,String director) {
+		super(title,category,cost,length,director);
 	}
 	
-	//constructor method
-	public DigitalVideoDisc(String title) {
-		super(title);
-		nbDigitalVideoDisc += 1;
-		id = nbDigitalVideoDisc;
-		
-	}
-	public DigitalVideoDisc(String title, String category, float cost) {
-		super(title,category,cost);
-		nbDigitalVideoDisc += 1;
-		this.id = nbDigitalVideoDisc;
-		
-	}
-	public DigitalVideoDisc(String title, String category, String director, float cost) {
-		super(title,category,cost);
-		nbDigitalVideoDisc += 1;
-		this.id = nbDigitalVideoDisc;
-		
-		this.director = director;
-		
-	}
-	public DigitalVideoDisc(String title, String category, String director, int length, float cost) {
-		super(title,category,cost);
-		nbDigitalVideoDisc += 1;
-		this.id = nbDigitalVideoDisc;
-		this.director = director;
-		this.length = length;
-	}
 	
-	public int getID() {
-		return id;
-	}
 	
 	public String toString () {
 		String result = "DVD - ";
