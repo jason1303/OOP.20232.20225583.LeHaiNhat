@@ -1,51 +1,34 @@
 package hust.soict.cybersec.aims.media;
 
-import java.util.ArrayList;
+import java.util.ArrayList;	
 import java.util.List;
 
-public class Book {
-	private int id;
-	private String title;
-	private String category;
-	private float cost;
+public class Book extends Media{
+	
+	private static int nbBook = 0;
 	public List<String> authors = new ArrayList<String>();
 
-	public Book() {
-		// TODO Auto-generated constructor stub
+	public Book(String title, String category, float cost) {
+		super(title,category,cost);
+		id = nbBook;
+		nbBook += 1;
+	}
+	public Book (String title, float cost) {
+		super(title,cost);
+		id = nbBook;
+		nbBook += 1;;
+	}
+	public Book(String title, String category) {
+		super(title,category);
+		id = nbBook;
+		nbBook += 1;
+	}
+	public Book(String title) {
+		super(title);
+		id = nbBook;
+		nbBook += 1;
 	}
 
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
-	}
-
-	public String getTitle() {
-		return title;
-	}
-
-	public void setTitle(String title) {
-		this.title = title;
-	}
-
-	public String getCategory() {
-		return category;
-	}
-
-	public void setCategory(String category) {
-		this.category = category;
-	}
-
-	public float getCost() {
-		return cost;
-	}
-
-	public void setCost(float cost) {
-		this.cost = cost;
-	}
-	
 	public void addAuthor(String authorName) {
 		for(int i = 0 ; i < authors.size(); i++) {
 			if (authors.get(i) == authorName) {
@@ -58,6 +41,7 @@ public class Book {
 		return;
 		
 	}
+	
 	public void removeAuthor (String authorName) {
 		for(int i = 0 ; i < authors.size(); i++) {
 			if (authors.get(i) == authorName) {

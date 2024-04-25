@@ -1,7 +1,7 @@
 package hust.soict.cybersec.test.cart;
 
 import hust.soict.cybersec.aims.cart.Cart;
-import hust.soict.cybersec.aims.disc.DigitalVideoDisc;
+import hust.soict.cybersec.aims.media.disc.DigitalVideoDisc;
 
 public class CartTest {
 
