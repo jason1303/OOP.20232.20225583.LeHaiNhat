@@ -40,6 +40,15 @@ public abstract class Media {
 		this.cost = cost;
 	}
 	
+	//method
+	//overwrite equals (object class) 
+	public boolean equals (Object object) {
+		if (object == null || getClass() != object.getClass()) {
+			return false;
+		}
+		Media media = (Media) object;
+		return this.title.equals(media.title);
+	}
 	
 
 
