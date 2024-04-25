@@ -1,4 +1,6 @@
-package hust.soict.cybersec.aims.media;
+package hust.soict.cybersec.aims.media.disc;
+
+import hust.soict.cybersec.aims.media.Media;
 
 public class Disc extends Media{
 	

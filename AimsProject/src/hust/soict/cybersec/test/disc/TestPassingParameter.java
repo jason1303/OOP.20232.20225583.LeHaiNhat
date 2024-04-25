@@ -1,5 +1,5 @@
 package hust.soict.cybersec.test.disc;
-import hust.soict.cybersec.aims.media.DigitalVideoDisc;
+import hust.soict.cybersec.aims.media.disc.DigitalVideoDisc;
 
 public class TestPassingParameter {
 

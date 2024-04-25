@@ -1,7 +1,7 @@
 
 
 import hust.soict.cybersec.aims.cart.Cart;
-import hust.soict.cybersec.aims.media.DigitalVideoDisc;
+import hust.soict.cybersec.aims.media.disc.DigitalVideoDisc;
 
 public class Aims {
 

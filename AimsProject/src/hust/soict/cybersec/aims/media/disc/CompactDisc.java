@@ -1,4 +1,4 @@
-package hust.soict.cybersec.aims.media;
+package hust.soict.cybersec.aims.media.disc;
 
 public class CompactDisc {
 
