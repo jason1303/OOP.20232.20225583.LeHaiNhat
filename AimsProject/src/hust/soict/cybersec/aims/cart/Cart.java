@@ -7,7 +7,8 @@ import hust.soict.cybersec.aims.media.Media;
 public class Cart {
 	
 	private ArrayList<Media> itemsOrdered = new ArrayList<Media>();
-
+	
+	
 	public void addMedia(Media media) {
 		itemsOrdered.add(media);
 	}

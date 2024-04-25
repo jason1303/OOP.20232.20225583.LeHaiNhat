@@ -1,35 +1,20 @@
 package hust.soict.cybersec.aims.media;
 
 public abstract class Media {
-	
+	//instance attribute
 	protected int id;
 	protected String title;
 	protected String category;
 	protected float cost;
 	
+	//constructor
 	public Media(String title, String category, float cost) {
 		this.title = title;
 		this.category = category;
 		this.cost  = cost;
 	}
-	public Media(String title, float cost) {
-		this.title = title;
-		this.category = null;
-		this.cost  = cost;
-	}
-	public Media(String title, String category) {
-		this.title = title;
-		this.category = category;
-		this.cost  = 0;
-	}
-	public Media(String title) {
-		this.title = title;
-		this.category = null;
-		this.cost  = 0;
-	}
 	
-	
-	
+	//getter and setter
 	public int getId() {
 		return id;
 	}
@@ -54,6 +39,8 @@ public abstract class Media {
 	public void setCost(float cost) {
 		this.cost = cost;
 	}
+	
+	
 
 
 	

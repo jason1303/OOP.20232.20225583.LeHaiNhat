@@ -5,30 +5,18 @@ import java.util.List;
 
 public class Book extends Media{
 	
+	//instance attribute
 	private static int nbBook = 0;
 	public List<String> authors = new ArrayList<String>();
-
+	
+	//constructor
 	public Book(String title, String category, float cost) {
 		super(title,category,cost);
 		id = nbBook;
 		nbBook += 1;
 	}
-	public Book (String title, float cost) {
-		super(title,cost);
-		id = nbBook;
-		nbBook += 1;;
-	}
-	public Book(String title, String category) {
-		super(title,category);
-		id = nbBook;
-		nbBook += 1;
-	}
-	public Book(String title) {
-		super(title);
-		id = nbBook;
-		nbBook += 1;
-	}
 
+	//methods
 	public void addAuthor(String authorName) {
 		for(int i = 0 ; i < authors.size(); i++) {
 			if (authors.get(i) == authorName) {
@@ -41,7 +29,6 @@ public class Book extends Media{
 		return;
 		
 	}
-	
 	public void removeAuthor (String authorName) {
 		for(int i = 0 ; i < authors.size(); i++) {
 			if (authors.get(i) == authorName) {
