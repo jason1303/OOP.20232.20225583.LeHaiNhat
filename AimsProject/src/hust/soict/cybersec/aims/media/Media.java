@@ -50,6 +50,12 @@ public abstract class Media {
 		return this.title.equals(media.title);
 	}
 	
+	//polymorphism with toString method
+	public String toString() {
+		String result = "";
+		return result;
+	}
+	
 
 
 	
