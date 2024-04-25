@@ -39,4 +39,10 @@ public class Book extends Media{
 		}
 		System.out.println("This author is not exist");
 	}
+	
+	public String toString () {
+		String result = "Book - ";
+		result = result +  this.getTitle() + " - " + this.getCategory() + " - " + this.getCost();
+		return result;
+	}
 }

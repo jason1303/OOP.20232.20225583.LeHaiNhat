@@ -18,6 +18,14 @@ public class CompactDisc extends Disc implements Playable{
 	public String getArtist() {
 		return artist;
 	}
+	
+	public int getLength() {
+		int result = 0 ;
+		for (Track track : tracks) {
+			result = result + track.getLength();
+		}
+		return result;
+	}
 
 
 	//method
@@ -43,13 +51,6 @@ public class CompactDisc extends Disc implements Playable{
 		System.out.println("This track is not in the CD");
 	}
 	
-	public int getLength() {
-		int result = 0 ;
-		for (Track track : tracks) {
-			result = result + track.getLength();
-		}
-		return result;
-	}
 	
 	@Override
 	public void Play() {
@@ -58,6 +59,11 @@ public class CompactDisc extends Disc implements Playable{
 		}
 	}
 	
+	public String toString () {
+		String result = "CD - ";
+		result = result +  this.getTitle() + " - " + this.getCategory() + " - " + this.getDirector() + " - " + this.getLength() + ": "  + this.artist + ": " + this.getCost();
+		return result;
+	}
 	
 	
 	
