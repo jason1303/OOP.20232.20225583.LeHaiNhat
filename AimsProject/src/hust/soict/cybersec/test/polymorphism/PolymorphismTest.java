@@ -5,6 +5,7 @@ import hust.soict.cybersec.aims.media.disc.CompactDisc;
 import hust.soict.cybersec.aims.media.disc.DigitalVideoDisc;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class PolymorphismTest {
 
@@ -19,6 +20,8 @@ public class PolymorphismTest {
 		mediae.add(cd);
 		mediae.add(book);
 		mediae.add(dvd);
+		
+		Collections.sort(mediae,Media.COMPARE_BY_TITLE_COST);
 		
 		for(Media m : mediae) {
 			System.out.println(m.toString());
