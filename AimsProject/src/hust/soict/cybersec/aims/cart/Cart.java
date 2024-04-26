@@ -38,6 +38,28 @@ public class Cart {
 		return cost;
 	}
 	
+	
+	//*************************************************************************
+	//UPDATE FOR CONSOLE APPLICATION
+	public void displayCart() {
+		for (Media media : itemsOrdered) {
+			System.out.println(media.toString());
+		}
+	}
+	
+	public Media searchMediaByTitle(String title) {
+		for (Media media : itemsOrdered) {
+			if (media.getTitle().equalsIgnoreCase(title)) {
+				return media;
+			}
+		}
+
+		return null;
+	}
+	public void emptyCart() {
+		itemsOrdered.clear();
+	}
+	
 	//Lap03.4: Update the cart class and CartTest class
 //	public void print() {
 //		DigitalVideoDisc temp;
