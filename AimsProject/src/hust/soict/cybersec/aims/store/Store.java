@@ -34,18 +34,40 @@ public class Store {
 			}
 		}
 		System.out.println("This media is not available in the store");
+		
+		
 	}
-	public static void showMenu() {
-		System.out.println("AIMS: ");
+	//**********************************************************************************************
+	// 					UPDATE FOR CONSOLE APPLICATION
+	
+	
+	//display all items in the store
+	public void displayItems() {
 		System.out.println("--------------------------------");
-		System.out.println("1. View store");
-		System.out.println("2. Update store");
-		System.out.println("3. See current cart");
-		System.out.println("0. Exit");
-		System.out.println("--------------------------------");
-		System.out.println("Please choose a number: 0-1-2-3");
+		System.out.println("ITEMS AVAILABLE IN THE STORE");
+		int cc = 0;
+		for (Media media : storeItems) {
+			System.out.println(media.getTitle());
+			cc += 1;
 		}
+		System.out.println("Total: " + cc + " items");
+	}
+	
+	// see media's details by it's title
+	
+	public Media searchMediaByTitle(String title) {
+		for (Media media : storeItems) {
+			if (media.getTitle().equalsIgnoreCase(title)) {
+				return media;
+			}
+		}
+
+		return null;
+	}
 	
 	
+	
+	//**********************************************************************************************
+
 	
 }	
