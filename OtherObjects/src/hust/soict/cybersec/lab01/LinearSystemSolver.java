@@ -31,7 +31,7 @@ public class LinearSystemSolver {
             } else {
                 double x1 = (b1 * c2 - b2 * c1) / (a1 * b2 - a2 * b1);
                 double x2 = (a2 * c1 - a1 * c2) / (a1 * b2 - a2 * b1);
-                System.out.printf(x1, x2);
+                System.out.println(x1, x2);
             }
         } catch (Exception e) {
             System.out.printf("Please provide valid values.");
