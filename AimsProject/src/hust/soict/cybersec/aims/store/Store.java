@@ -6,9 +6,16 @@ import java.util.ArrayList;
 import hust.soict.cybersec.aims.media.Media;
 
 public class Store {
+	
 	//instance attribute
 	ArrayList<Media> storeItems;
 	
+	
+	
+	
+	public ArrayList<Media> getItemsInStore() {
+		return storeItems;
+	}
 	//constructor
 	public Store() {
 		storeItems = new ArrayList<Media>();
@@ -63,6 +70,10 @@ public class Store {
 		}
 
 		return null;
+	}
+	public void addMedia(String string, String string2, String string3) {
+		// TODO Auto-generated method stub
+		
 	}
 	
 	

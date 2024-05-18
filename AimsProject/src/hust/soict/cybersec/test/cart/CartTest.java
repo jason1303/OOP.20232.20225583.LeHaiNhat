@@ -11,27 +11,27 @@ public class CartTest {
 		
 		
 		DigitalVideoDisc dvd1 = new DigitalVideoDisc("The Lion King",
-				"Animation", "Roger Allers", 87,19.95f);
-		cart.addDigitalVideoDisc(dvd1);
+				"Animation", 19.95f, 87,"Roger Allers");
+		cart.addMedia(dvd1);
 		
 		DigitalVideoDisc dvd2 = new DigitalVideoDisc("Star War", 
-				"Science Fiction", "George Lucas", 87, 24.95f);
-		cart.addDigitalVideoDisc(dvd2);
+				"Science Fiction", 24.95f, 87, "George Lucas");
+		cart.addMedia(dvd2);
 		
 		DigitalVideoDisc dvd3 = new DigitalVideoDisc("Aladin",
-				"Aimation", 18.99f);
-		cart.addDigitalVideoDisc(dvd3);
+				"Aimation", 18.99f, 0, null);
+		cart.addMedia(dvd3);
 		
 		//cart.removeDigitalVideoDisc(dvd1);
 		
 		DigitalVideoDisc dvd4 = new DigitalVideoDisc("The Lion Queen",
-				"Animation", "Roger Allers", 87,19.95f);
-		cart.addDigitalVideoDisc(dvd4);
+				"Animation", 19.95f, 87,"Roger Allers");
+		cart.addMedia(dvd4);
 		//Test the print method
-		cart.print();
+		cart.displayCart();;
 		
 		
-		cart.SearchDVDByTitle("The Lion Kinda");
+		cart.searchMediaByTitle("The Lion Kinda");
 		
 		
 	}
