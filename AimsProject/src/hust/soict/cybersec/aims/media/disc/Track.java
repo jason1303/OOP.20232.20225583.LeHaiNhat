@@ -1,5 +1,7 @@
 package hust.soict.cybersec.aims.media.disc;
 
+import hust.soict.cybersec.aims.exception.PlayerException;
+
 public class Track implements Playable{
 	//instance attribute
 	private String title;
@@ -35,10 +37,16 @@ public class Track implements Playable{
 	}
 	
 	@Override
-	public void Play() {
+	public void Play() throws PlayerException {
 		// TODO Auto-generated method stub
-		System.out.println("Playing Track: " + this.getTitle());
-		System.out.println("Track length: " + this.getLength());
+		if (this.getLength() > 0 ) {
+			System.out.println("Playing Track: " + this.getTitle());
+			System.out.println("Track length: " + this.getLength());
+		}else {
+			throw new PlayerException("ERROR: DVD length is non-positive");
+		}
+		
+		
 	}
 	
 

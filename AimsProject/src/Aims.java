@@ -1,7 +1,10 @@
 import hust.soict.*;
 import java.util.Scanner;
 
+import javax.naming.LimitExceededException;
+
 import hust.soict.cybersec.aims.cart.Cart;
+import hust.soict.cybersec.aims.exception.PlayerException;
 import hust.soict.cybersec.aims.media.Book;
 import hust.soict.cybersec.aims.media.Media;
 import hust.soict.cybersec.aims.media.disc.CompactDisc;
@@ -14,7 +17,7 @@ public class Aims {
 	static Scanner scanner = new Scanner(System.in);
 	static  Store store;
 	static Cart cart;
-	public static void main(String[] args) {
+	public static void main(String[] args) throws LimitExceededException, PlayerException {
 		
 		store = new Store();
 		cart = new Cart();
@@ -37,7 +40,7 @@ public class Aims {
 		
 		
 	
-	public static void showMenu() {
+	public static void showMenu() throws PlayerException, LimitExceededException {
 		boolean run_welcome = true;
 		while (run_welcome == true) {
 			System.out.println("");
@@ -87,7 +90,7 @@ public class Aims {
 
 		
 	}
-	public static void storeMenu() {
+	public static void storeMenu() throws LimitExceededException, PlayerException {
 		boolean run_storeMenu = true;
 		while (run_storeMenu == true) {
 			System.out.println("");
@@ -183,7 +186,7 @@ public class Aims {
 		
 	}
 	
-	public static void mediaDetailsMenu(Media media) {
+	public static void mediaDetailsMenu(Media media) throws PlayerException, LimitExceededException {
 		System.out.println("");
 		System.out.println("");
 		System.out.println("********************************************************");
@@ -231,7 +234,7 @@ public class Aims {
 		}
 	}
 	
-	public static void cartMenu() {
+	public static void cartMenu() throws PlayerException {
 		boolean run_cartMenu = true;
 		while (run_cartMenu == true) {
 			System.out.println("");

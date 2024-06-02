@@ -2,6 +2,8 @@ package hust.soict.cybersec.aims.media.disc;
 
 import java.util.ArrayList;
 
+import hust.soict.cybersec.aims.exception.PlayerException;
+
 public class CompactDisc extends Disc implements Playable{
 	
 	//instance attribute
@@ -53,11 +55,25 @@ public class CompactDisc extends Disc implements Playable{
 	
 	
 	@Override
-	public void Play() {
-		for (Track track : tracks ) {
-			track.Play();
+	public void Play() throws PlayerException {
+		if (this.getLength() > 0 ) {
+			java.util.Iterator iter = tracks.iterator();
+			Track nextTrack;
+			while (iter.hasNext()) {
+				nextTrack = (Track) iter.next();
+				try {
+					nextTrack.Play();
+				}catch (PlayerException e ) {
+					throw e;
+				}
+			}
+			
+		}else {
+			throw new PlayerException("ERROR: CD length is non-positive");
 		}
+		
 	}
+	
 	
 	public String toString () {
 		String result = "CD - ";

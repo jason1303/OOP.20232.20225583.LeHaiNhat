@@ -1,4 +1,4 @@
-package hust.soict.aims.screen.manager;
+package hust.soict.cybersec.aims.screen.manager;
 
 import java.awt.Font;
 import java.awt.event.ActionEvent;
