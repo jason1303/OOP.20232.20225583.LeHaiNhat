@@ -1,4 +1,4 @@
-package hust.soict.aims.screen.manager;
+package hust.soict.cybersec.aims.screen.manager;
 
 import java.awt.BorderLayout;
 import java.awt.Color;

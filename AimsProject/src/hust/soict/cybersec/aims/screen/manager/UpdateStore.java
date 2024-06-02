@@ -1,4 +1,4 @@
-package hust.soict.aims.screen.manager;
+package hust.soict.cybersec.aims.screen.manager;
 
 public interface UpdateStore {
 	public void addbook(String title, String category,Float cost);

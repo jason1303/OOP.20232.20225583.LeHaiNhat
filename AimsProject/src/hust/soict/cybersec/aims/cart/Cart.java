@@ -1,16 +1,32 @@
 package hust.soict.cybersec.aims.cart;
 import java.util.ArrayList;
 
+import javax.naming.LimitExceededException;
 
 import hust.soict.cybersec.aims.media.Media;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 
 public class Cart {
+	private static final int MAX_NUMBER_ORDERED = 20;
+	private ObservableList<Media> itemsOrdered = FXCollections.observableArrayList();
+
 	
-	private ArrayList<Media> itemsOrdered = new ArrayList<Media>();
-	
-	
-	public void addMedia(Media media) {
-		itemsOrdered.add(media);
+	public static int getMaxNumberOrdered() {
+		return MAX_NUMBER_ORDERED;
+	}
+
+	public ObservableList<Media> getItemsOrdered() {
+		return itemsOrdered;
+	}
+
+	public void addMedia(Media media) throws LimitExceededException{
+		if (itemsOrdered.size() < MAX_NUMBER_ORDERED) {
+			itemsOrdered.add(media);
+		}else {
+			throw new LimitExceededException("ERROR: The number of media has reached the limit");
+		}
+		
 	}
 	
 	public void removeMedia(Media media) {

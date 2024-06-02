@@ -1,4 +1,4 @@
-package hust.soict.aims.screen.manager;
+package hust.soict.cybersec.aims.screen.manager;
 
 import java.awt.*;
 import java.awt.event.ActionEvent;

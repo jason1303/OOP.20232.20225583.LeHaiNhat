@@ -8,14 +8,16 @@ import hust.soict.cybersec.aims.media.Media;
 public class Store {
 	
 	//instance attribute
+	
+	
 	ArrayList<Media> storeItems;
 	
-	
-	
-	
+
 	public ArrayList<Media> getItemsInStore() {
 		return storeItems;
 	}
+	
+	
 	//constructor
 	public Store() {
 		storeItems = new ArrayList<Media>();

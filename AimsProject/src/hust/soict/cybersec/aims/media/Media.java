@@ -50,14 +50,28 @@ public abstract class Media {
 	
 	//method
 	//overwrite equals (object class) 
+	
+	@Override
 	public boolean equals (Object object) {
-		if (object == null || getClass() != object.getClass()) {
+		if (object == null || (object instanceof Media)) {
 			return false;
 		}
 		Media media = (Media) object;
-		return this.title.equals(media.title);
+		return this.title != null && this.title.equals(media.title) && this.cost == media.cost;
 	}
 	
+	public int compareTo(Media other) {
+		if (other == null) {
+			throw new NullPointerException("The object is compare to is null");
+			
+		}
+		int compareTitle = this.title.compareTo(other.getTitle());
+		if (compareTitle != 0 ) {
+			return compareTitle;
+		}
+		return Double.compare(this.cost, other.getCost());
+		
+	}
 	//polymorphism with toString method
 	public String toString() {
 		String result = "";
